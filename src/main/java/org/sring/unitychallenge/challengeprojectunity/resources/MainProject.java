@@ -24,6 +24,7 @@ public class MainProject {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void putProjects(Project proj) throws IOException {
+        synchronized(this) {
         project.addProject(proj);
         try {
         FileWriter file = new FileWriter("/Users/sringarikapandey/Desktop/Projects.txt");
@@ -32,8 +33,10 @@ public class MainProject {
         file.flush();
         file.close();
         System.out.println();
+        
         } catch(Exception e) {
             System.err.println(e.getMessage());
+        }
         }
     }
 
