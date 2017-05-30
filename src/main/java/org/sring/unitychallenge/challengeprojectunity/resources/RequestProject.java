@@ -15,6 +15,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 
 import org.codehaus.jettison.json.JSONException;
@@ -34,7 +35,7 @@ public class RequestProject {
     ProjectService project = new ProjectService();
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getProject(@BeanParam ParameterBean paramBean) throws ParseException {
+    public Response getProject(@BeanParam ParameterBean paramBean) throws ParseException, WebApplicationException {
         try {
         if (paramBean.country == null && paramBean.keyword== null && paramBean.id == null && paramBean.number == null) {
             //return highest price project
