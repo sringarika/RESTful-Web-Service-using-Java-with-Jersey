@@ -1,17 +1,18 @@
 package org.sring.unitychallenge.challengeprojectunity.response;
 
 import org.sring.unitychallenge.challengeprojectunity.model.Project;
-//class that handles the response for GET methods
+
+// class that handles the response for GET methods
 public class Response {
     private String projectName;
-    private double projectCost;
+    private String projectCost;
     private String projectUrl;
     private String message;
     public Response() {
         
     }
     public Response(Project p) {
-        this.projectCost = p.getProjectCost();
+        this.projectCost = Double.toString(p.getProjectCost());
         this.projectName = p.getProjectName();
         this.projectUrl = p.getProjectUrl();
     }
@@ -33,13 +34,13 @@ public class Response {
     /**
      * @return the projectCost
      */
-    public double getProjectCost() {
+    public String getProjectCost() {
         return projectCost;
     }
     /**
      * @param projectCost the projectCost to set
      */
-    public void setProjectCost(double projectCost) {
+    public void setProjectCost(String projectCost) {
         this.projectCost = projectCost;
     }
     /**

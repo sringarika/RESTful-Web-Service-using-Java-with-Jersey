@@ -26,7 +26,7 @@ import org.sring.unitychallenge.challengeprojectunity.response.ErrorResponse;
 import org.sring.unitychallenge.challengeprojectunity.response.Response;
 import org.sring.unitychallenge.challengeprojectunity.service.ProjectService;
 
-// class that handles GET request. it takes query parameters that is stored in ParameterBean.
+//class that handles GET request. it takes query parameters that is stored in ParameterBean.
 //method returns a Response type object.
 @Path("/requestproject")
 public class RequestProject {
@@ -35,6 +35,7 @@ public class RequestProject {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getProject(@BeanParam ParameterBean paramBean) throws ParseException {
+        try {
         if (paramBean.country == null && paramBean.keyword== null && paramBean.id == null && paramBean.number == null) {
             //return highest price project
             Project p = project.getHighestCostProject();
@@ -84,8 +85,13 @@ public class RequestProject {
             }
             return new Response(project.getHighestCost(finalList));
         }
+        } catch (Exception e) {
+            Response error = new Response();
+            error.setMessage("no project found");
+            return error;
+        }
         return null;
-        
     }
+    
 
 }
