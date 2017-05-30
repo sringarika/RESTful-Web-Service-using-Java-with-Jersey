@@ -52,8 +52,12 @@ public class RequestProject extends ApplicationExceptionMapper {
             queryStr.put("country", paramBean.country);
             queryStr.put("number", paramBean.number);
             queryStr.put("keyword", paramBean.keyword);
+            //quesryStr contains all the query params.to keep only the ones that have values, i remove the null ones.
+            
             queryStr.values().removeIf(Objects::isNull);
+            //newList contains all projects in map
             List<Project> newList = new ArrayList<Project>(project.getAllProjects());
+            //finalList contains only the matching projects. projects that match with all the parameters and are enabled.
             List<Project> finalList = new ArrayList<Project>();
             for (int i = 0; i< newList.size(); i++) {
                 Project p = newList.get(i);
