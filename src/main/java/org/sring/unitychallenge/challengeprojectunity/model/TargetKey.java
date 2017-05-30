@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+//Holds information form the Target Keys in JSON object
 public class TargetKey {
 
 private int number;

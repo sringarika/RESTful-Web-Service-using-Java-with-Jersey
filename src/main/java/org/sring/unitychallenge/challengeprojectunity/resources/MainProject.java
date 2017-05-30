@@ -15,6 +15,7 @@ import javax.ws.rs.core.MediaType;
 import org.sring.unitychallenge.challengeprojectunity.model.Project;
 import org.sring.unitychallenge.challengeprojectunity.service.ProjectService;
 
+//class that handles POST request. method consumes JSON and writes it on a text file
 @Path("/createproject")
 
 public class MainProject {
@@ -22,8 +23,6 @@ public class MainProject {
     
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    //@Produces(MediaType.APPLICATION_JSON)
-    //@Produces(MediaType.TEXT_PLAIN)
     public void putProjects(Project proj) throws IOException {
         project.addProject(proj);
         try {

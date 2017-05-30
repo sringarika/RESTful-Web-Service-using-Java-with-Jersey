@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+//Project class. Holds all the information from the JSON object
 public class Project {
 
 private int id;

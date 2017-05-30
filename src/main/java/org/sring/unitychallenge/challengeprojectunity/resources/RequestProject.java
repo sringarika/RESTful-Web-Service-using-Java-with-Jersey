@@ -26,6 +26,8 @@ import org.sring.unitychallenge.challengeprojectunity.response.ErrorResponse;
 import org.sring.unitychallenge.challengeprojectunity.response.Response;
 import org.sring.unitychallenge.challengeprojectunity.service.ProjectService;
 
+// class that handles GET request. it takes query parameters that is stored in ParameterBean.
+//method returns a Response type object.
 @Path("/requestproject")
 public class RequestProject {
     

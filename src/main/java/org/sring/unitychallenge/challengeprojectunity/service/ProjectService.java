@@ -13,6 +13,7 @@ import org.sring.unitychallenge.challengeprojectunity.model.Project;
 import org.sring.unitychallenge.challengeprojectunity.model.TargetKey;
 import org.sring.unitychallenge.challengeprojectunity.storage.StorageSpace;
 
+//class that handles all the functions. few extra methods are written for extra implementation.
 public class ProjectService {
     private Map<Integer, Project> projService = StorageSpace.getProjects();
     

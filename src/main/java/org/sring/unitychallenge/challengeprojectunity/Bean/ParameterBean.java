@@ -1,7 +1,7 @@
 package org.sring.unitychallenge.challengeprojectunity.Bean;
 
 import javax.ws.rs.QueryParam;
-
+//class that defines the parameters service gets in GET request 
 public class ParameterBean {
     @QueryParam("projectid") 
     public String id;

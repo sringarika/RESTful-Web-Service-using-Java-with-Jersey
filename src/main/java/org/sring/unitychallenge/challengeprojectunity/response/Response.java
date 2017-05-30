@@ -1,7 +1,7 @@
 package org.sring.unitychallenge.challengeprojectunity.response;
 
 import org.sring.unitychallenge.challengeprojectunity.model.Project;
-
+//class that handles the response for GET methods
 public class Response {
     private String projectName;
     private double projectCost;
