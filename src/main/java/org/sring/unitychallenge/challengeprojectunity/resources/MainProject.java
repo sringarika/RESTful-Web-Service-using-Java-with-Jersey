@@ -15,7 +15,7 @@ import javax.ws.rs.core.MediaType;
 import org.sring.unitychallenge.challengeprojectunity.model.Project;
 import org.sring.unitychallenge.challengeprojectunity.service.ProjectService;
 
-//class that handles POST request. method consumes JSON and writes it on a text file
+//class that handles POST request. method consumes JSON and writes it on a text file. Thread safe
 @Path("/createproject")
 
 public class MainProject {
