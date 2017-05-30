@@ -35,8 +35,6 @@ public class RequestProject {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getProject(@BeanParam ParameterBean paramBean) throws ParseException {
-       // try{
-
         if (paramBean.country == null && paramBean.keyword== null && paramBean.id == null && paramBean.number == null) {
             //return highest price project
             Project p = project.getHighestCostProject();

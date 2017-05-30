@@ -8,6 +8,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * Root resource (exposed at "myresource" path)
  */
+//class was already created. not related to the project
 @Path("myresource")
 public class MyResource {
 

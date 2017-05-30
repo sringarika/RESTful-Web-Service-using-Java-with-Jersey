@@ -114,9 +114,6 @@ this.targetKeys = targetKeys;
 }
 @Override
 public String toString() {
-    //StringBuffer sb = new StringBuffer();
-    //sb.append("")
-
     return new StringBuffer("{\"id\":").append(this.id)
             .append(", \"projectName\":").append("\"").append(this.projectName).append("\"")
             .append(", \"creationDate\":").append("\"").append(this.creationDate).append("\"")
@@ -126,7 +123,6 @@ public String toString() {
             .append(", \"projectUrl\":").append("\"").append(this.projectUrl).append("\"")
             .append(", \"targetKeys\":").append(this.targetKeys).append("\n")
             .toString();
-
 }
 
 /**
