@@ -21,6 +21,7 @@ import javax.ws.rs.core.MediaType;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 import org.sring.unitychallenge.challengeprojectunity.Bean.ParameterBean;
+import org.sring.unitychallenge.challengeprojectunity.exception.ApplicationExceptionMapper;
 import org.sring.unitychallenge.challengeprojectunity.model.Project;
 import org.sring.unitychallenge.challengeprojectunity.model.TargetKey;
 import org.sring.unitychallenge.challengeprojectunity.response.ErrorResponse;
@@ -30,7 +31,7 @@ import org.sring.unitychallenge.challengeprojectunity.service.ProjectService;
 //class that handles GET request. it takes query parameters that is stored in ParameterBean.
 //method returns a Response type object.
 @Path("/requestproject")
-public class RequestProject {
+public class RequestProject extends ApplicationExceptionMapper {
     
     ProjectService project = new ProjectService();
     @GET
